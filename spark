@@ -1,3 +1,6 @@
 https://zhzhan.gitbooks.io/learn-apache-spark/content/shuffleexternalsorter.html
 
 http://stats.stackexchange.com/questions/18891/bagging-boosting-and-stacking-in-machine-learning
+
+spark sql 一个dataframe如果是几千万以上的记录，则跟别的表（即使只有几百几千的记录）join时，会需要大量的内存，
+通常容易产生内存溢出或者频繁GC over limited等问题，解决办法是最好使用较少记录的表来操作；另外也可以加大executor内存，最好使用alluxio
